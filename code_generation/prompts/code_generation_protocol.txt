@@ -1,0 +1,38 @@
+CODE GENERATION PROTOCOL — every script MUST follow this structure:
+
+  STEP 1 — DECLARE PRIMARY PARAMETERS  (execute once, before any cad.* call)
+    Declare all key design dimensions from NORMALIZED_SPEC as named Python variables.
+    All length values passed to the API must be in millimeters (mm), and all angle values must be in degrees. If NORMALIZED_SPEC uses different units, convert the values to the required API units before declaring or using them.
+    Derived values that are only used once may be computed inline as arithmetic expressions inside the API call arguments.
+    Example:
+      diameter       = 50.0
+      height         = 30.0
+      wall_thickness = 4.0
+      chamfer_size   = 1.0
+
+  For each feature in MODELING_PLAN, apply the relevant steps in order:
+  - Sketch-based features must follow Steps 2–4.
+  - Direct body features such as fillet, chamfer, and thread may skip Steps 2 and 3 and be applied directly to the target body.
+
+  STEP 2 — CREATE SKETCH AND GEOMETRY
+    Open a sketch on the target plane, then draw all geometry for this feature.
+    Use the parameter variables from Step 1 as arguments.
+    Capture the returned str ref into a named variable immediately after each call.
+    Example:
+      circle_ref = cad.add_circle((0, 0), 5.0)
+      line_ref   = cad.add_line((0, 0), (10, 0))
+
+  STEP 3 — APPLY CONSTRAINTS
+    Add only the key constraints needed to fully define the sketch
+    (Horizontal, Vertical, Concentric, Parallel, Equal, driving dimensions).
+    Pass ref variables from Step 2 — never bare string literals.
+    - Do NOT waste tokens trying to manually add every loop-closing coincident constraint — the system will automatically apply coincident constraints to close loops.
+    - Do NOT add contradictory constraints that would over-constrain the sketch.
+
+  STEP 4 — 3D FEATURES
+    Immediately issue the 3D operation that consumes this sketch (extrude, revolve, helix_sweep, etc.).
+    Add direct body features such as fillet, chamfer, and thread when required.
+
+
+
+

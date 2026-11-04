@@ -1,0 +1,64 @@
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Local IDE/project files
+.idea/
+.vscode/
+
+# Runtime output
+logs/
+tmp/
+result/
+*_out.txt
+directions_output.txt
+
+# Local bundled archives or external checkouts
+/POWER/
+/power.zip
+
+# 本机配置和虚拟环境
+.claude/
+.venv/
+venv/
+env/
+
+# 密钥与本地凭据（配置示例可以提交）
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# 运行与提取结果
+*.log
+/test_output/
+/test_artifacts/
+/_validation_harness_tmp/
+/checklist_visual_example/
+/end_to_end_flange_example/
+/checklist_example_output.json
+/fusion360_api_registry.json
+/fusion360/Fusion-360-MCP-Server-main/update_state.json
+
+# 备份、临时副本和历史开发方案
+backups/
+*.bak
+*.bak.*
+*.backup
+* copy.*
+*_old.py
+*_old.txt
+/docs/plans/
+.git-meta
+
+# 本地测试、辅助脚本与示例不纳入发布仓库
+/tests/
+/scripts/
+/examples/
+/verify_transparency.py

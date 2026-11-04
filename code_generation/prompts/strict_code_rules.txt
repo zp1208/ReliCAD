@@ -1,0 +1,9 @@
+STRICT CODE RULES:
+1. EXCLUSIVE API USAGE: You MUST ONLY use functions explicitly listed in the CORE API REFERENCE.
+2. API CALL RESTRICTION: All API calls must use `cad.*` methods explicitly listed in the CORE API REFERENCE. Plain Python variable assignments, literals, containers, and arithmetic expressions are allowed.
+3. NEVER define functions/classes/imports.
+4. ENTITY CAPTURE POLICY:
+   - Every cad.* call that returns a ref (str) MUST be captured into a named variable immediately.
+   - Pass the ref variable to subsequent calls — NEVER use bare string literals like `"circle_0"` or `"line_0"`.
+5. FAIL-SAFE: If a feature is unsupported, skip it instead of inventing APIs.
+6.When creating primitive geometry, set its dimensions, position, and orientation to satisfy the intended constraints as much as possible at creation time, so that later constraint solving only refines the model rather than causing large global shifts or unintended topology changes.
