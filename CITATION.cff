@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the ReliCAD paper in preferred-citation."
+type: software
+title: "ReliCAD: Fusion 360 research implementation"
+authors:
+  - name: "ReliCAD contributors"
+url: "https://github.com/zp1208/ReliCAD"
+repository-code: "https://github.com/zp1208/ReliCAD"
+keywords:
+  - parametric CAD
+  - text-to-CAD
+  - CAD editing
+  - design intent
+  - large language models
+preferred-citation:
+  type: article
+  title: "ReliCAD: From Uncertain LLM Generation to Reliable Parametric CAD Modeling"
+  authors:
+    - family-names: Zheng
+      given-names: Peng
+    - family-names: Dong
+      given-names: Xintong
+    - family-names: Li
+      given-names: Chuanyang
+    - family-names: Jing
+      given-names: Jiaxin
+    - family-names: Han
+      given-names: Chuqi
+    - family-names: Shen
+      given-names: Hailong
+    - family-names: Song
+      given-names: Yanzhi
+    - family-names: Yang
+      given-names: Zhouwang
+  journal: arXiv
+  year: 2026
+  month: 9
+  doi: "10.48550/arXiv.2609.22325"
+  url: "https://arxiv.org/abs/2609.22325"

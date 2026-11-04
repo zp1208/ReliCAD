@@ -1,0 +1,10 @@
+# 当前本地 Python 3.10.19 环境中的主要运行依赖版本。
+# Autodesk Fusion、adsk 和 Fusion 端服务不由 pip 安装。
+openai==2.24.0
+langchain-core==1.2.16
+langgraph==1.0.7
+tenacity==9.1.4
+pydantic==2.12.5
+Pillow==12.1.1
+typing-extensions==4.15.0
+filelock==3.29.4
