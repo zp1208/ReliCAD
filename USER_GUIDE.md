@@ -2,7 +2,7 @@
 
 本仓库对应论文 [ReliCAD: From Uncertain LLM Generation to Reliable Parametric CAD Modeling](https://arxiv.org/abs/2609.22325)。英文项目首页见 [README](README.md)，方法与实现的定位关系见 [论文代码对应表](docs/PAPER_TO_CODE.md)。
 
-当前仓库保持私有供审查。附带的 Aura Friday 服务端包含专有许可限制，额外授权尚未确认；公开分发前需要处理相关许可。以下记录当前实现的环境与连接要求，不构成第三方软件授权。
+当前仓库保持私有供审查。Fusion 端执行服务作为外部依赖，不随仓库分发；需要单独取得相应使用授权并配置兼容服务。以下记录当前实现的环境与连接要求，不构成第三方软件授权。
 
 ## Python 环境
 
@@ -28,7 +28,7 @@ python -m pip install -r requirements.txt
 | --- | --- |
 | 地址 | `http://127.0.0.1:8765/execute` |
 | 客户端默认位置 | `fusion360/mcp_bridge/mcp_base.py` |
-| 本仓库附带的服务端配置 | `fusion360/Fusion-360-MCP-Server-main/config.py` |
+| 服务端 | 外部依赖，需单独配置，不随本仓库分发 |
 | Fusion Python API | 由 Fusion 自带的 `adsk` 提供，不通过 pip 安装 |
 
 在已有授权的环境中启动服务后，可以先检查端口：
@@ -39,7 +39,7 @@ Test-NetConnection 127.0.0.1 -Port 8765
 
 端口可达仅表示服务正在监听，不能代替一次完整建模验证。此前旧文档中的 `fusion360_tools/server` 和 8080 端口不是当前主流程的连接方式。
 
-附带服务端的上游项目为 [AuraFriday/Fusion-360-MCP-Server](https://github.com/AuraFriday/Fusion-360-MCP-Server)。请结合本地 [LICENSE](fusion360/Fusion-360-MCP-Server-main/LICENSE) 与 [EULA](fusion360/Fusion-360-MCP-Server-main/EULA.md) 确认使用和分发条件。
+现有本地环境中的服务端基于 [AuraFriday/Fusion-360-MCP-Server](https://github.com/AuraFriday/Fusion-360-MCP-Server)。该目录已从 Git 发布内容中排除；已有本地副本会保留，新克隆仓库不包含它。使用该组件前请确认上游 [LICENSE](https://github.com/AuraFriday/Fusion-360-MCP-Server/blob/main/LICENSE) 与 [EULA](https://github.com/AuraFriday/Fusion-360-MCP-Server/blob/main/EULA.md) 的授权条件；替代服务也必须兼容上述接口及本项目的命令协议。
 
 ## LLM 配置
 

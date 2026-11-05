@@ -10,7 +10,7 @@ Code for [ReliCAD: From Uncertain LLM Generation to Reliable Parametric CAD Mode
 
 ## Usage
 
-Requires **Python 3.10**, **Autodesk Fusion**, and a compatible Fusion-side execution service at `http://127.0.0.1:8765/execute`. See the [Chinese setup guide](USER_GUIDE.md) for connection details and third-party licensing.
+Requires **Python 3.10**, **Autodesk Fusion**, and a compatible Fusion-side execution service at `http://127.0.0.1:8765/execute`. The Fusion-side service is not included in this repository. See the [Chinese setup guide](USER_GUIDE.md) for connection details and third-party licensing.
 
 **1. Install dependencies**
 

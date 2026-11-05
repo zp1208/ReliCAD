@@ -44,7 +44,8 @@ env/
 /end_to_end_flange_example/
 /checklist_example_output.json
 /fusion360_api_registry.json
-/fusion360/Fusion-360-MCP-Server-main/update_state.json
+# 第三方 Fusion 服务端仅保留在本地，不纳入 Git 发布内容
+/fusion360/Fusion-360-MCP-Server-main/
 
 # 备份、临时副本和历史开发方案
 backups/
