@@ -2,7 +2,7 @@
 
 本仓库对应论文 [ReliCAD: From Uncertain LLM Generation to Reliable Parametric CAD Modeling](https://arxiv.org/abs/2609.22325)。英文项目首页见 [README](README.md)，方法与实现的定位关系见 [论文代码对应表](docs/PAPER_TO_CODE.md)。
 
-当前仓库保持私有供审查。Fusion 端执行服务作为外部依赖，不随仓库分发；需要单独取得相应使用授权并配置兼容服务。以下记录当前实现的环境与连接要求，不构成第三方软件授权。
+Fusion 端执行服务作为外部依赖，不随仓库分发；需要单独取得相应使用授权并配置兼容服务。以下记录当前实现的环境与连接要求，不构成第三方软件授权。
 
 ## Python 环境
 
